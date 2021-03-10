@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es" class="h-100">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entradas Full</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body class="d-flex flex-column h-100">
+  <!-- CABECERA CON BARRA DE MENU O NAVEGACION -->
+  <header>
+    <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-light">
+      <div class="container-fluid">
+        <!-- LOGO  -->
+        <a class="navbar-brand text-success" href="#">ENTRADAS FULL</a>
+        <!-- Boton Menu responsivo -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Items del menu (BOTONES, BUSCAR Y LOGIN) -->
+          <!-- Botones desplegables -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="btn btn-outline-success text-dark dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                EVENTOS
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Eventos de la semana</a></li>
+                <li><a class="dropdown-item" href="#">Eventos del mes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="btn btn-outline-success  text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                CATEGORIAS
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Conciertos</a></li>
+                <li><a class="dropdown-item" href="#">Conferencias</a></li>
+                <li><a class="dropdown-item" href="#">Exposiciones</a></li>
+                <li><a class="dropdown-item" href="#">Festivales</a></li>
+                <li><a class="dropdown-item" href="#">Stand Up Comedy</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Campo de Busqueda -->
+          <form class="d-flex">
+            <input class="form-control form-control-sm me-2" type="search" placeholder="Busqueda" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+          <!-- LOGIN -->
+          <a class="nav-link activate" aria-current="page" href="#"> Iniciar Sesion</a>
+        </div>
+    </nav>
+  </header>
+
+  <!-- CUERPO PRINCIPAL-->
+  <main class="flex-shrink-0">
+    <div class="container">
+      <h1 class="text-center text-success">ENTRADAS FULL</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="button-container mb-5">
+            <img class="p-0" src="/img/poster1.jpg" width="380" height="420">
+            <a href="#">COMPRAR</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row row-cols-2">
+            <div class="button-container">
+              <img class="p-0" src="/img/poster2.jpg" width="190" height="205">
+              <a href="#">COMPRAR</a>
+            </div>
+            <div class="button-container">
+              <img class="p-0" src="/img/poster3.jpg" width="190" height="205">
+              <a href="#">COMPRAR</a>
+            </div>
+            <div class="button-container">
+              <img class="p-0" src="/img/poster4.jpg" width="190" height="205">
+              <a href="#">COMPRAR</a>
+            </div>
+            <div class="button-container">
+              <img class="p-0" src="/img/poster2.jpg" width="190" height="205">
+              <a href="#">COMPRAR</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <img class="offset-md-4" src="/img/banner.jpg" width="210" height="420">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer mt-auto py-3">
+    <div id="footer">
+      <div class="contaiter w-auto pt-5">
+        <div class="row">
+          <div class="col-4">
+            <ul class="list">
+              <li class="list-item text-light">EVENTOS</li>
+              <li class="list-item text-light">Eventos de la semana</li>
+              <li class="list-item text-light">Eventos del mes</li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <ul class="list">
+              <li class="list-item text-light">CATEGORIAS</li>
+              <li class="list-item text-light">Conciertos</li>
+              <li class="list-item text-light">Conferencias</li>
+              <li class="list-item text-light">Exposiciones</li>
+              <li class="list-item text-light">Festivales</li>
+              <li class="list-item text-light">Stand Up Comedy</li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <div class="row row-cols-3">
+              <a href="#">
+                <img src="/img/instagram_icon.png" width="50" height="50">
+              </a>
+              <a href="#">
+                <img src="/img/facebook_icon.png" width="50" height="50">
+              </a>
+              <a href="#">
+                <img src="/img/twitter_icon.png" width="50" height="50">
+              </a>
+            </div>
+            <div class="row">
+              <div class="col text-center">
+                </br></br></br>
+                <p class="text-light">© 2021 ENTRADAS FULL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
