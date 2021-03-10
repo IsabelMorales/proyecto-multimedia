@@ -11335,6 +11335,7 @@ fieldset:disabled .btn {
 /*------- TIPOGRAFIA -------*/
 * {
   font-family: Nunito-Regular;
+  color: #2B2118;
 }
 
 @font-face {
@@ -11386,7 +11387,7 @@ main > .container {
   background-color: #FF4B0A;
 }
 
-.navbar-custom a{
+.navbar-custom a, .navbar-custom a:hover{
   color: white;
 }
 
@@ -11400,8 +11401,48 @@ a{
   color: #5Bc0Be;
 }
 
-.btn-custom{
+a:hover{
+  text-decoration: none !important;
+  color: #45B0AE;
+}
+
+.btn-naranja{
   color: white;
   background-color: #FF4B0A;
+  border-radius: 50px;
+}
+
+.btn-naranja:hover{
+  color: white;
+  background-color: #E03C00;
+  border-radius: 50px;
+}
+
+.btn-azul{
+  color: white;
+  background-color: #5Bc0Be;
+  border-radius: 50px;
+  
+}
+
+.btn-azul:hover{
+  color: white;
+  background-color: #45B0AE;
+  border-radius: 50px;
+}
+
+.btn-gris{
+  color: #AAAAAA;
+  background-color: white;
+  border-color: #AAAAAA;
+  border-radius: 50px;
+  border-width: 2px;
+  font-family: Nunito-ExtraBold;
+}
+
+.btn-gris:hover{
+  color: #7D7D7D;
+  border-color: #7D7D7D;
+  background-color: white;
   border-radius: 50px;
 }
