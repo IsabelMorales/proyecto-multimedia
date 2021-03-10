@@ -11332,6 +11332,28 @@ fieldset:disabled .btn {
 }
 /*# sourceMappingURL=main.css.map */
 
+/*------- TIPOGRAFIA -------*/
+* {
+  font-family: Nunito-Regular;
+}
+
+@font-face {
+  font-family: Nunito-Regular;
+  src: url(./fonts/NunitoSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: Nunito-ExtraBold;
+  src: url(./fonts/NunitoSans-ExtraBold.ttf);
+}
+
+.nunitoRegular{
+  font-family: Nunito-Regular;
+}
+
+.nunitoExtraBold{
+  font-family: Nunito-ExtraBold;
+}
 
 /*  LO que indica el example de NavBar & Footer   */
 main > .container {
