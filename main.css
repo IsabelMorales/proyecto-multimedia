@@ -20,7 +20,7 @@
   --bs-gray-dark: #343a40;
   --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
-  --bs-success: #f88a0b;
+  --bs-success: #FF4B0A;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
@@ -11384,21 +11384,22 @@ main > .container {
 }
 
 .navbar-custom{
-  background-color: #FF4B0A;
+  background-color: var(--bs-success);
 }
 
-.navbar-custom a, .navbar-custom a:hover{
+.navbar-custom a, .navbar-custom a:hover, .custom-toggler{
   color: white;
 }
 
-h1{
-  color: #FF4B0A;
+h1, h2{
+  color: var(--bs-success);
   font-family: Nunito-ExtraBold;
 }
 
 a{
   text-decoration: none !important;
   color: #5Bc0Be;
+  font-family: Nunito-ExtraBold;
 }
 
 a:hover{
@@ -11408,11 +11409,19 @@ a:hover{
 
 .btn-naranja{
   color: white;
-  background-color: #FF4B0A;
-  border-radius: 50px;
+  background-color: var(--bs-success);
+  border-radius: 50px;  
+  min-width: 140px;
 }
 
-.btn-naranja:hover{
+.btn-naranja-m{
+  color: white;
+  background-color: var(--bs-success);
+  border-radius: 50px;
+  min-width: 80px;
+}
+
+.btn-naranja:hover, .btn-naranja-m:hover{
   color: white;
   background-color: #E03C00;
   border-radius: 50px;
@@ -11422,7 +11431,7 @@ a:hover{
   color: white;
   background-color: #5Bc0Be;
   border-radius: 50px;
-  
+  min-width: 140px;
 }
 
 .btn-azul:hover{
@@ -11438,11 +11447,39 @@ a:hover{
   border-radius: 50px;
   border-width: 2px;
   font-family: Nunito-ExtraBold;
+  min-width: 140px;
+}
+.btn-gris-m{
+  color: #AAAAAA;
+  background-color: white;
+  border-color: #AAAAAA;
+  border-radius: 50px;
+  border-width: 2px;
+  font-family: Nunito-ExtraBold;
+  min-width: 80px;
 }
 
-.btn-gris:hover{
+.btn-gris:hover, .btn-gris-m:hover{
   color: #7D7D7D;
   border-color: #7D7D7D;
   background-color: white;
   border-radius: 50px;
+}
+
+.menu-activo {
+  color: #FF4B0A;
+}
+
+.menu-item {
+  color: #2B2118;
+  font-family: Nunito-Regular;
+}
+
+.menu-activo:hover, .menu-item:hover {
+  color: #5Bc0Be;
+}
+
+.custom-check:checked{
+  background-color: var(--bs-success);
+  border-color: var(--bs-success);
 }

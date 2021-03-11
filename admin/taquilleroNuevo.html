@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrador - Nuevo Taquillero</title>
+  <link rel="stylesheet" href="../main.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand nunitoExtraBold" href="#">Entradas Full</a>
+        <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <div class="d-flex ms-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#FFFFFF"
+              class="bi bi-question-circle-fill mt-2" viewBox="0 0 16 16">
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z" />
+            </svg>
+            <a class="navbar-brand nunitoExtraBold ms-3" href="#">Salir</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ELIMINAR -->
+  <div class="modal fade" id="eliminar" tabindex="-1" aria-labelledby="eliminar" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <h2>Atención</h2>
+          <h4 class="my-5 mx-5">
+            ¿Seguro que quiere eliminar esta entrada?
+          </h4>
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <button type="button" class="btn btn-gris-m me-3" data-bs-dismiss="modal">No</button>
+              <button type="button" class="btn btn-naranja-m" data-bs-dismiss="modal">Si</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SINCRONIZAR -->
+  <div class="modal fade" id="registrar" tabindex="-1" aria-labelledby="registrar" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <h3 class="mt-3 mb-5 mx-3">
+            Código para enlazar el dispositivo móvil
+          </h3>
+          <div class="row justify-content-center">
+            <div class="col-8 mb-3">
+              <img class="qr"
+                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik0wLDB2MTcwaDE3MFYwSDB6IE0xMzAsMTMwSDQwVjQwaDkwVjEzMHoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHJlY3QgeD0iNjUiIHk9IjY1IiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggZD0iTTM0MiwwdjE3MGgxNzBWMEgzNDJ6IE00NzIsMTMwaC05MFY0MGg5MFYxMzB6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxyZWN0IHg9IjQwNyIgeT0iNjUiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNMCwzNDJ2MTcwaDE3MFYzNDJIMHogTTEzMCw0NzJINDB2LTkwaDkwVjQ3MnoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHJlY3QgeD0iNjUiIHk9IjQwNyIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIi8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxyZWN0IHg9IjQwIiB5PSIxOTciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cG9seWdvbiBwb2ludHM9IjEyMCwyNzcgMTIwLDIzNyA4MCwyMzcgODAsMjc3IDExOSwyNzcgMTE5LDMxNyAxNTksMzE3IDE1OSwyNzcgCQkiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHJlY3QgeD0iMjgwIiB5PSI3NyIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIi8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxyZWN0IHg9IjIwMCIgeT0iNDAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI3NyIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cmVjdCB4PSIyNDAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cG9seWdvbiBwb2ludHM9IjI0MCwxMTcgMjQwLDE1NyAyMDAsMTU3IDIwMCwxOTcgMjgwLDE5NyAyODAsMTE3IAkJIi8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxwb2x5Z29uIHBvaW50cz0iMjgwLDM1NSAyODAsMzE2IDI0MCwzMTYgMjQwLDIzNyAyMDAsMjM3IDIwMCwzMTcgMjQwLDMxNyAyNDAsMzU2IDI4MCwzNTYgMjgwLDM5NSAzNjAsMzk1IDM2MCwzNTUgCQkiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHJlY3QgeD0iMjgwIiB5PSIxOTciIHdpZHRoPSI0MCIgaGVpZ2h0PSI4MCIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNNDcyLDIzNnYtMzloLTczdjQwaC0zOXY0MGg0MHYzOWgxMTJ2LTgwSDQ3MnogTTQ3MiwyNzZoLTcydi0zOWg3MlYyNzZ6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxyZWN0IHg9IjQ3MiIgeT0iMzU1IiB3aWR0aD0iNDAiIGhlaWdodD0iODAiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHJlY3QgeD0iMzIwIiB5PSIyNzciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cmVjdCB4PSIzNjAiIHk9IjM5NSIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIi8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxyZWN0IHg9IjQwMCIgeT0iMzU1IiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHBvbHlnb24gcG9pbnRzPSI0MDAsNDM1IDQwMCw1MTIgNDQwLDUxMiA0NDAsNDc1IDQ3Miw0NzUgNDcyLDQzNSAJCSIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cmVjdCB4PSIyMDAiIHk9IjM1NiIgd2lkdGg9IjQwIiBoZWlnaHQ9Ijc2Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxwb2x5Z29uIHBvaW50cz0iMzIwLDQ3MiAzMjAsNDMyIDI0MCw0MzIgMjQwLDUxMiAyODAsNTEyIDI4MCw0NzIgMzE5LDQ3MiAzMTksNTEyIDM1OSw1MTIgMzU5LDQ3MiAJCSIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cmVjdCB4PSIxMjAiIHk9IjE5NyIgd2lkdGg9IjgwIiBoZWlnaHQ9IjQwIi8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxyZWN0IHk9IjIzNyIgd2lkdGg9IjQwIiBoZWlnaHQ9IjgwIi8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REUTILIZAR -->
+  <div class="modal fade" id="reutilizar" tabindex="-1" aria-labelledby="reutilizar" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <h3 class="mt-3 mb-5 mx-3">
+            Ingrese el código QR para reutilizar la entrada
+          </h3>
+          <div class="mb-5 mx-3">
+            <input type="text" class="form-control form-control-sm" id="codigoQR">
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <button type="button" class="btn btn-gris-m me-3" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-naranja-m" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="container-fluid mb-5">
+      <div class="row">
+        <div class="col-12 text-center pt-4">
+          <h1>Nuevo Taquillero</h1>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <div class="col-2 ps-0">
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action menu-item">Panel de Entradas</a>
+            <a href="#" class="list-group-item list-group-item-action menu-item">Nueva Entrada</a>
+            <a href="#" class="list-group-item list-group-item-action menu-item" data-bs-toggle="modal"
+            data-bs-target="#registrar">Registrar Dispositivo</a>
+            <a href="#" class="list-group-item list-group-item-action menu-item" data-bs-toggle="modal"
+            data-bs-target="#reutilizar">Reutilizar una Entrada</a>
+            <a href="#" class="list-group-item list-group-item-action menu-item">Estadísticas</a>
+            <a href="#" class="list-group-item list-group-item-action menu-item">Taquillero</a>
+            <a href="#" class="list-group-item list-group-item-action menu-item">Staff</a>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="row justify-content-center">
+            <div class="col-5">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12 px-5">
+                      <div class="row text-center">
+                        <div class="col-12">
+                          <h5>Datos Personales</h5>
+                        </div>
+                      </div>
+                      
+                      <div class="mt-2">
+                        <label for="usuario" class="form-label m-0">Usuario*</label>
+                        <input type="text" class="form-control form-control-sm" id="usuario">
+                        <div id="emailHelp" class="form-text">Máximo 10 caracteres</div>
+                      </div>
+                      <div>
+                        <label for="usuario" class="form-label m-0">Contraseña*</label>
+                        <input type="text" class="form-control form-control-sm" id="usuario">
+                        <div id="emailHelp" class="form-text">Máximo 10 caracteres</div>
+                      </div>
+                      <div>
+                        <label for="usuario" class="form-label m-0">Cédula*</label>
+                        <input type="text" class="form-control form-control-sm" id="usuario">
+                        <div id="emailHelp" class="form-text">Máximo 10 caracteres</div>
+                      </div>
+                      <div>
+                        <label for="usuario" class="form-label m-0">Nombre*</label>
+                        <input type="text" class="form-control form-control-sm" id="usuario">
+                        <div id="emailHelp" class="form-text">Máximo 10 caracteres</div>
+                      </div>
+                      <div>
+                        <label for="usuario" class="form-label m-0">Télefono*</label>
+                        <input type="text" class="form-control form-control-sm" id="usuario">
+                        <div id="emailHelp" class="form-text">Máximo 10 caracteres</div>
+                      </div>
+                      <div id="emailHelp" class="form-text">(*)Campos Obligatorios</div>
+                      <div class="text-center mt-3">
+                        <input type="submit" class="btn btn-naranja" value="Guardar">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
